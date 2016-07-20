@@ -48,7 +48,8 @@ tilda_window_setup_alpha_mode (tilda_window *tw)
     if (visual == NULL) {
         visual = gdk_screen_get_system_visual (screen);
     }
-    if (visual != NULL && gdk_screen_is_composited (screen)) {
+    
+    if (visual != NULL/* && gdk_screen_is_composited (screen)*/) {
         /* Set RGBA colormap if possible so VTE can use real alpha
          * channels for transparency. */
 
